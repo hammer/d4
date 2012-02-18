@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css">
+  <link rel="stylesheet" href="/static/css/dashboard.css" type="text/css">
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.csv.js"></script>
+  <title>D3 Dashboard</title>
+</head>
+
+
+<body>
+  <!-- Container for Blueprint Grid -->
+  <div class="container">
+
+    <!-- Header -->
+    <div class="span-24 last" id="header">
+      <h3 id="header-text">D3 Dashboard</h3>
+    </div>
+    <hr />
+
+    <!-- Row 1 -->
+    <div class="span-8">
+      <div class="dashboard-widget" id="dot">
+        <h3>Dot Plot</h3>
+        <script type="text/javascript" src="/static/js/dot_plot.js"></script>
+      </div>
+    </div>
+
+    <div class="span-8">
+      <div class="dashboard-widget">
+        <h3>Jitter Plot</h3>
+        <img src="/static/img/jitter_plot.png" />
+      </div>
+    </div>
+
+    <div class="span-8 last">
+      <div class="dashboard-widget">
+        <h3>Histogram</h3>
+        <img src="/static/img/histogram.png" />
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="span-8">
+      <div class="dashboard-widget">
+        <h3>Density Plot</h3>
+        <img src="/static/img/density_plot.png" />
+      </div>
+    </div>
+
+    <div class="span-8">
+      <div class="dashboard-widget">
+        <h3>Box Plot</h3>
+        <img src="/static/img/box_plot.png" />
+      </div>
+    </div>
+
+    <div class="span-8 last">
+      <div class="dashboard-widget">
+        <h3>ECDF Plot</h3>
+        <img src="/static/img/ecdf_plot.png" />
+      </div>
+    </div>
+  </div>
+</body>

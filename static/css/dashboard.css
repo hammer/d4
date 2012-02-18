@@ -1,0 +1,31 @@
+body {
+  font-family:“Lucida Grande”, sans-serif;
+  font-size:10px;
+}
+
+#header {
+  margin-top:10px;
+}
+
+#header-text {
+  color:#999999;
+}
+
+.dashboard-widget {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.x line, .y line {
+  stroke:#ccc;
+  shape-rendering:crispEdges;
+}
+
+h3 {
+  text-align:center;
+}
+
+img {
+  height:225px;
+  width:275px;
+}

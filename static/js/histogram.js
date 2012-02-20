@@ -23,7 +23,8 @@ d3.csv("f500.csv", function handleCSV(csv) {
  
   svg.selectAll("rect")
      .data(histogram)
-     .enter().append("rect")
+     .enter()
+     .append("rect")
      .attr("width", x.rangeBand())
      .attr("x", function(d) { return x(d.x); })
      .attr("y", function(d) { return height - y(d.y); })

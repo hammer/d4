@@ -11,6 +11,11 @@ d3.csv("f500.csv", function handleCSV(csv) {
   var x = d3.scale.ordinal()
                   .domain(histogram.map(function(d) { return d.x; }))
                   .rangeRoundBands([0, width]);
+
+  //  var x = d3.scale.linear()
+  //                  .domain([d3.min(histogram.map(function(d) { return d.x; })),
+  //                           d3.max(histogram.map(function(d) { return d.x+d.dx; }))])
+  //                  .range([0, width]);
  
   var y = d3.scale.linear()
                   .domain([0, d3.max(histogram.map(function(d) { return d.y; }))])
@@ -25,7 +30,7 @@ d3.csv("f500.csv", function handleCSV(csv) {
      .data(histogram)
      .enter()
      .append("rect")
-     .attr("width", x.rangeBand())
+     .attr("width", x.rangeBand()) // function(d) { return x(d.dx); }
      .attr("x", function(d) { return x(d.x); })
      .attr("y", function(d) { return height - y(d.y); })
      .attr("height", function(d) { return y(d.y); });

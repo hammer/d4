@@ -21,6 +21,12 @@ body {
   shape-rendering:crispEdges;
 }
 
+path {
+  stroke:#000;
+  stroke-width:1.5px;
+  fill:none;
+}
+
 h3 {
   text-align:center;
 }

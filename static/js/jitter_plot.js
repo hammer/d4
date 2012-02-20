@@ -16,7 +16,7 @@ d3.csv("f500.csv", function handleCSV(csv) {
                   .domain(["CA"])
                   .range([h/2]);
 
-  var vis = d3.select("div #dot")
+  var vis = d3.select("div #jitter")
               .append("svg")
               .attr("width", w + p * 2)
               .attr("height", h + p * 2)
@@ -69,9 +69,9 @@ d3.csv("f500.csv", function handleCSV(csv) {
      .enter()
      .append("circle")
      .attr("cx", x)
-     .attr("cy", y("CA"))
+     .attr("cy", function() { return (h/4) + (Math.random() * (h/2)) })
      .attr("r", r)
-     .on("mouseover", function(d, i){d3.select("div#dot g.x").append("text").attr("id", "tip").attr("x", x(d)+5).attr("y", y("CA")-5).attr("text-anchor", "start").attr("font-size", "8").text(d3.format(",")(d)); d3.select(this).attr("fill", "red")})
+     .on("mouseover", function(d, i){d3.select("div#jitter g.x").append("text").attr("id", "tip").attr("x", x(d)+5).attr("y", d3.select(this).attr("cy")-5).attr("text-anchor", "start").attr("font-size", "8").text(d3.format(",")(d)); d3.select(this).attr("fill", "red")})
      .on("mouseout", function(d, i){d3.select("g.x #tip").remove(); d3.select(this).attr("fill", "black")});
 });
 

@@ -6,7 +6,7 @@ d3.csv("f500.csv", function handleCSV(csv) {
   var histogram = d3.layout.histogram().bins(30)(data);
 
   var p = 20,
-      w = 275 - 2 * p;
+      w = 275 - 2 * p,
       h = 225 - 2 * p;
  
   var x = d3.scale.linear()

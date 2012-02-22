@@ -11,6 +11,20 @@ body {
   color:#999999;
 }
 
+#box rect {
+  fill-opacity:0;
+  stroke:black;
+  stroke-width:1;
+}
+
+#box line {
+  stroke:black;
+}
+
+#box line.yaxis {
+  stroke:#ccc;
+}
+
 .dashboard-widget {
   margin-top:10px;
   margin-bottom:10px;

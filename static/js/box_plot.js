@@ -108,4 +108,24 @@ d3.csv("f500.csv", function handleCSV(csv) {
        .attr("dy", "0.5ex")
        .attr("text-anchor", "end")
        .text(y.tickFormat(5));
+
+  // x axis
+  var xrule = vis.selectAll("g.x")
+                 .data(["CA"])
+                 .enter()
+                 .append("g")
+                 .attr("class", "x");
+
+  xrule.append("line")
+       .attr("x1", w/2)
+       .attr("x2", w/2)
+       .attr("y1", h)
+       .attr("y2", h+4);
+
+  xrule.append("text")
+       .attr("x", w/2)
+       .attr("y", h+5)
+       .attr("dy", ".71em")
+       .attr("text-anchor", "middle")
+       .text(String);
 });

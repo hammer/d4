@@ -25,6 +25,18 @@ body {
   stroke:#ccc;
 }
 
+#ecdf g.datapoint line {
+  stroke:black;
+}
+
+#ecdf g.x line {
+  stroke:#ccc;
+}
+
+#ecdf g.y line {
+  stroke:black;
+}
+
 .dashboard-widget {
   margin-top:10px;
   margin-bottom:10px;
